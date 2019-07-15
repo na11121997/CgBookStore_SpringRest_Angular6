@@ -2,6 +2,6 @@
 
 BookStore Application implemented via
 
-Java Spring Rest - Backend
+Java Spring Restful - Backend
 
 Angular 6 - Front End

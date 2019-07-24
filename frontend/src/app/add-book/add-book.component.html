@@ -1,0 +1,94 @@
+
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+    <div class="form-group">
+      <h1 class="text-center text-primary">ADD BOOK</h1>
+
+      <div class="input-group-prepend">
+        <input type="text" [(ngModel)]="book.title" class="form-control" placeholder="Add Book Name" name="title" required #name1="ngModel" minlength="4" maxlength="15"><br>
+
+        <div *ngIf="name1.invalid && (name1.dirty || name1.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name1.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name1.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+
+        <input type="text" [(ngModel)]="book.price"  class="form-control" placeholder="Add Book Price" name="price" required #name2="ngModel" minlength="1" maxlength="15"><br>
+        <div *ngIf="name2.invalid && (name2.dirty || name2.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name2.errors.required">
+            Price is required.
+          </div>
+          <div *ngIf="name2.errors.minlength">
+            Price must be at least 1 digits .
+          </div>
+        </div>
+
+        <input type="text" [(ngModel)]="book.publisher"  class="form-control" placeholder="Add Book Publisher" name="publisher" required #name3="ngModel"><br>
+        <div *ngIf="name3.invalid && (name3.dirty || name3.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name3.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name3.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <input type="text" [(ngModel)]="book.publishYear"  class="form-control" placeholder="Add Book Publish Year" name="publishYear" required #name4="ngModel"><br>
+        <div *ngIf="name4.invalid && (name4.dirty || name4.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name4.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name4.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <input type="text" [(ngModel)]="book.summaryDetails"  class="form-control" placeholder="Summary Details" name="summaryDetails" required #name5="ngModel"><br>
+        <div *ngIf="name5.invalid && (name5.dirty || name5.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name5.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name5.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <input type="text" [(ngModel)]="book.rating"  class="form-control" placeholder="Ratings" name="rating" required #name6="ngModel"><br>
+        <div *ngIf="name6.invalid && (name6.dirty || name6.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name6.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name6.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <input type="text" [(ngModel)]="book.authorId"  class="form-control" placeholder="Author" name="author" required #name7="ngModel"><br>
+        <div *ngIf="name7.invalid && (name7.dirty || name7.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name7.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name7.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <button id="abcd" type="submit" class="btn btn-info" [disabled]="!movieForm.form.dirty">Add</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
